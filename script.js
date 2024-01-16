@@ -509,7 +509,6 @@ const game = {
   },
 };
 
-/*
 // 1.
 for (const [i, player] of game.scored.entries())
   console.log(`Goal ${i + 1}: ${player}`);
@@ -532,12 +531,12 @@ for (const [team, odd] of Object.entries(game.odds)) {
 // Odd of victory Borrussia Dortmund: 6.5
 
 // BONUS
-// So the solution is to loop over the array, and add the array elements as object properties, and then increase the count as we encounter a new occurence of a certain element
+//So the solution is to loop over the array, and add the array elements as object properties, and then increase the count as we encounter a new occurence of a certain element
 const scorers = {};
 for (const player of game.scored) {
   scorers[player] ? scorers[player]++ : (scorers[player] = 1);
 }
-*/
+
 
 /*
 ///////////////////////////////////////
