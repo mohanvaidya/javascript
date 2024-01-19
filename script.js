@@ -209,4 +209,24 @@ const scorers = {
   Hummels: 1,
   Lewandowski: 2,
 };
+//Bonus problem
+const flights =
+  '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
+
+const getcode = str => {
+  return str.slice(0, 3).toUpperCase();
+};
+for (const flight of flights.split('+')) {
+  const [type, from, to, time] = flight.split(';');
+  // console.log(from);
+
+  const output = `${type.startsWith('_Delayed') ? '🔴' : ' '}${type.replaceAll(
+    '_',
+    ' '
+  )} from ${getcode(from)} to ${getcode(to)} (${time.replace(
+    ':',
+    'h'
+  )})`.padStart(50);
+  console.log(output);
+}
 
